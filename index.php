@@ -1,7 +1,5 @@
 <?php
 
-
-
 $connection=ssh2_connect('172.16.110.84',22);
 $user = 'playcrab';
 $pass = 'play!@#crab';
