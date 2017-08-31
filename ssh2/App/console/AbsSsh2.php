@@ -11,10 +11,10 @@ Abstract Class AbsSsh2 extends Command
     private $_conn;
     private $_stream;
     private $_errorStream;
-    
+
     protected $_stdOut;
     protected $_stdErr;
-    
+
     public function __construct()
     {
         if(!$this->_conn) {
@@ -26,7 +26,7 @@ Abstract Class AbsSsh2 extends Command
         }
         parent::__construct();
     }
-    
+
     public function handle($cmd, $callBack = null)
     {
         $this->_stream = ssh2_exec($this->_conn, $cmd);
@@ -53,7 +53,7 @@ Abstract Class AbsSsh2 extends Command
         $str .= $this->_stdErr ? "stdErr: " . PHP_EOL . $splitLine . PHP_EOL . $this->_stdErr : '';
         return $str;
     }
-    
+
     public function __call($func, $param)
     {
     }

@@ -8,25 +8,32 @@ class Application
 {
     function run()
     {
+        $this->init();
     }
     
     function init()
     {
-        //config
-        
-        //console
         $container = new Container;
-        
-        $container['console'] = function(){
+
+        //init config
+        \App\config\Init::register();
+
+        //init ssh 
+        $r = $container->keys();
+        print_r($r);
+        $sshConf = $container['config.ssh'];
+        print_r($sshConf);
+
+        //init console
+        $container['console'] = function() {
             return new console;
         };
-        
         $console = $container['console'];
-        $console->add(new App\Demo);
-        $console->add(new App\console\Taillog);
+        $console->add(new \App\Demo);
+        $console->add(new \App\console\Taillog);
         
         $console->run();
-        
-        
     }
+
+
 }

@@ -7,12 +7,17 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class Taillog extends AbsSsh2
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     protected function configure()
     {
         $this
         ->setName('taillog')
         // ->addOption('grep', 'g', InputArgument::OPTIONAL, 'grep some key word')
-        ->addOption('type', 't', InputArgument::OPTIONAL, 'specify type of log', 'error')
+        ->addOption('type', 't', InputArgument::OPTIONAL, 'specify type of log', 'game')
         ->addOption('linenum', 'l', InputArgument::OPTIONAL, 'show num of tail line', 50)
 
         ->setDescription('show error log by sort date')
