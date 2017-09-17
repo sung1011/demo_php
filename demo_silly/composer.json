@@ -1,0 +1,13 @@
+{
+    "name": "demo_silly",
+    "type": "demo",
+    "require": {
+        "mnapoli/silly": "~1.6"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
