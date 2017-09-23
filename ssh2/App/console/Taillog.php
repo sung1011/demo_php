@@ -7,6 +7,11 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class Taillog extends AbsSsh2
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     protected function configure()
     {
         $this

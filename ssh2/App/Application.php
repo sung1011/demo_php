@@ -29,3 +29,4 @@ class Application
         $console->run();
     }
 }
+
