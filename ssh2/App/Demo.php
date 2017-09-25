@@ -1,27 +1,27 @@
-<?php 
+<?php
 namespace App;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class Demo extends Command 
+class Demo extends Command
 {
     protected function configure()
     {
         $this
         // the name of the command (the part after "bin/console")
         ->setName('demo')
-        
+
         // the short description shown while running "php bin/console list"
         ->setDescription('just a simple demo')
-        
+
         // the full command description shown when running the command with
         // the "--help" option
         ->setHelp('This command is a simple demo')
         ;
     }
-    
+
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         // outputs multiple lines to the console (adding "\n" at the end of each line)
@@ -30,12 +30,12 @@ class Demo extends Command
             '============',
             '',
             ]);
-            
-            // outputs a message followed by a "\n"
-            $output->writeln('Whoa!');
-            
-            // outputs a message without adding a "\n" at the end of the line
-            $output->write('You are about to ');
-            $output->write('create a user.');
-        }
+
+        // outputs a message followed by a "\n"
+        $output->writeln('Whoa!');
+
+        // outputs a message without adding a "\n" at the end of the line
+        $output->write('You are about to ');
+        $output->write('create a user.');
     }
+}

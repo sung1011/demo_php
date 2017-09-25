@@ -2,11 +2,12 @@
 namespace App\console;
 
 use Symfony\Component\Console\Command\Command;
+
 /**
 * php ssh抽象类
 * require 需要安装ssh2拓展
 */
-Abstract Class AbsSsh2 extends Command
+abstract class AbsSsh2 extends Command
 {
     private $_conn;
     private $_stream;
@@ -17,7 +18,7 @@ Abstract Class AbsSsh2 extends Command
 
     public function __construct()
     {
-        if(!$this->_conn) {
+        if (!$this->_conn) {
             $conn = ssh2_connect('172.16.110.84', 22);
             $user = 'playcrab';
             $pass = '';
@@ -45,13 +46,14 @@ Abstract Class AbsSsh2 extends Command
         return $rs;
     }
 
-    protected function std()
+    protected function stdOut()
     {
-        $str = '';
-        $splitLine = '----------------------------------';
-        $str .= $this->_stdOut ? "stdOut: " . PHP_EOL . $splitLine . PHP_EOL . $this->_stdOut : '';
-        $str .= $this->_stdErr ? "stdErr: " . PHP_EOL . $splitLine . PHP_EOL . $this->_stdErr : '';
-        return $str;
+        return $this->_stdOut;
+    }
+
+    protected function stdErr()
+    {
+        return $this->_stdErr;
     }
 
     public function __call($func, $param)
