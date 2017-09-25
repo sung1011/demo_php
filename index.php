@@ -1,20 +1,6 @@
 <?php
-$r = rand([1,10]);
-echo $r;
-// class Foo
-// {
-//     public function bar()
-//     {
-//         static $a = [];
-//         array_push($a, 1);
-//     }
-//
-//     public function getA()
-//     {
-//     }
-// }
-// $o = new Foo;
-// $rs = $o->bar();
-//
-// global $a;
-// print_r($a);
+
+$arr = ['a'=>1, 'b'=>2, 'c'=>3];
+$arr0 = ['a'=>4];
+$r = array_diff_key($arr, $arr0);
+print_r($r);
