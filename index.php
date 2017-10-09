@@ -1,9 +1,9 @@
 <?php
 
-class abc {
-
+class abc
+{
     public $a;
-	public $b;
+    public $b;
 
     public function abc($a)
     {
@@ -22,10 +22,7 @@ class abc {
         $this->a;
         array_map();
     }
-
-
 }
 
 
 $o = new abc;
-

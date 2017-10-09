@@ -1,0 +1,104 @@
+{
+    "_id": "31736_1042",
+    "league": {
+        "redpacket": {
+            "31736_1042:redpacket1260:59bc99a2cb4b0": {
+                "id": "31736_1042:redpacket1260:59bc99a2cb4b0",
+                "tag": "redpacket1260",
+                "sync": 1,
+                "_t": 1505532322,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket1380:59bc99a2cbaa0": {
+                "id": "31736_1042:redpacket1380:59bc99a2cbaa0",
+                "tag": "redpacket1380",
+                "sync": 1,
+                "_t": 1505532322,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket1380:59bc99a2cbba5": {
+                "id": "31736_1042:redpacket1380:59bc99a2cbba5",
+                "tag": "redpacket1380",
+                "sync": 1,
+                "_t": 1505532322,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket1080:59bce3c5183ee": {
+                "id": "31736_1042:redpacket1080:59bce3c5183ee",
+                "tag": "redpacket1080",
+                "sync": 1,
+                "_t": 1505551301,
+                "autosend_t": 1505726869,
+                "send": 2,
+                "send_t": 1505554089
+            },
+            "31736_1042:redpacket1070:59bce40fab02f": {
+                "id": "31736_1042:redpacket1070:59bce40fab02f",
+                "tag": "redpacket1070",
+                "sync": 1,
+                "_t": 1505551375,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket1060:59bce432e9e10": {
+                "id": "31736_1042:redpacket1060:59bce432e9e10",
+                "tag": "redpacket1060",
+                "sync": 1,
+                "_t": 1505551410,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket1050:59bce4571d307": {
+                "id": "31736_1042:redpacket1050:59bce4571d307",
+                "tag": "redpacket1050",
+                "sync": 1,
+                "_t": 1505551447,
+                "autosend_t": 1505726869,
+                "send": 2,
+                "send_t": 1505554077
+            },
+            "31736_1042:redpacket1040:59bce54a8b3cc": {
+                "id": "31736_1042:redpacket1040:59bce54a8b3cc",
+                "tag": "redpacket1040",
+                "sync": 1,
+                "_t": 1505551690,
+                "autosend_t": 1505726869,
+                "send": 2,
+                "send_t": 1505554130
+            },
+            "31736_1042:redpacket780:59bce69569bef": {
+                "id": "31736_1042:redpacket780:59bce69569bef",
+                "tag": "redpacket780",
+                "sync": 1,
+                "_t": 1505552021,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket10:59bce85371597": {
+                "id": "31736_1042:redpacket10:59bce85371597",
+                "tag": "redpacket10",
+                "sync": 1,
+                "_t": 1505552467,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket790:59bce8c56fcc5": {
+                "id": "31736_1042:redpacket790:59bce8c56fcc5",
+                "tag": "redpacket790",
+                "sync": 1,
+                "_t": 1505552581,
+                "autosend_t": 1505726869
+            },
+            "31736_1042:redpacket1270:59bd4da36f080": {
+                "id": "31736_1042:redpacket1270:59bd4da36f080",
+                "tag": "redpacket1270",
+                "sync": 1,
+                "_t": 1505578403,
+                "autosend_t": 1505751337
+            },
+            "31736_1042:redpacket1240:59bf67020b052": {
+                "id": "31736_1042:redpacket1240:59bf67020b052",
+                "tag": "redpacket1240",
+                "sync": 1,
+                "_t": 1505715970,
+                "autosend_t": 1505910919
+            }
+        }
+    }
+}
