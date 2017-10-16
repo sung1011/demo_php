@@ -1,13 +1,11 @@
 <?php
-namespace App\console;
-
-use Symfony\Component\Console\Command\Command;
+namespace App\server;
 
 /**
-* php ssh抽象类
+* php ssh server类
 * require 需要安装ssh2拓展
 */
-abstract class AbsSsh2 extends Command
+class Ssh
 {
     private $_conn;
     private $_stream;
@@ -16,7 +14,7 @@ abstract class AbsSsh2 extends Command
     protected $_stdOut;
     protected $_stdErr;
 
-    public function __construct()
+    private function getConn()
     {
         if (!$this->_conn) {
             $conn = ssh2_connect('172.16.110.84', 22);
@@ -25,12 +23,13 @@ abstract class AbsSsh2 extends Command
             ssh2_auth_password($conn, $user, $pass);
             $this->_conn = $conn;
         }
-        parent::__construct();
+        return $this->_conn;
     }
 
     public function handle($cmd, $callBack = null)
     {
-        $this->_stream = ssh2_exec($this->_conn, $cmd);
+        $conn = $this->getConn();
+        $this->_stream = ssh2_exec($conn, $cmd);
         $this->_errorStream = ssh2_fetch_stream($this->_stream, SSH2_STREAM_STDERR);
         stream_set_blocking($this->_stream, true);
         stream_set_blocking($this->_errorStream, true);
@@ -46,17 +45,17 @@ abstract class AbsSsh2 extends Command
         return $rs;
     }
 
-    protected function stdOut()
+    public function stdOut()
     {
         return $this->_stdOut;
     }
 
-    protected function stdErr()
+    public function stdErr()
     {
         return $this->_stdErr;
     }
 
-    public function __call($func, $param)
-    {
-    }
+    // public function __call($func, $param)
+    // {
+    // }
 }

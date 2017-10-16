@@ -4,14 +4,10 @@ namespace App\console;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Command\Command;
 
-class Taillog extends AbsSsh2
+class Taillog extends Command
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     protected function configure()
     {
         $this
@@ -29,14 +25,9 @@ class Taillog extends AbsSsh2
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+
         // get last date
         $date = date('Ymd', strtotime($input->getOption('date')));
-        // $cmd = "ls ~/log/error;";
-        // $date = $this->handle($cmd, function () {
-        //     $dateDir = array_filter(explode("\n", $this->_stdOut), 'is_numeric');
-        //     sort($dateDir);
-        //     return end($dateDir);
-        // });
 
         // get file path
         switch ($input->getOption('type')) {
@@ -49,8 +40,11 @@ class Taillog extends AbsSsh2
         $cmd .= "-n {$input->getOption('linenum')} ";
         $cmd .= $file;
 
-        $this->handle($cmd);
+        $app = new \App\Application;
+        $container = $app->getContainer();
+        $ssh = $container['server.ssh'];
+        $ssh->handle($cmd);
 
-        $output->write($this->stdOut());
+        $output->write($ssh->stdOut());
     }
 }
