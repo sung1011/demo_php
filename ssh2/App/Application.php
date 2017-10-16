@@ -15,9 +15,9 @@ class Application
     {
         //config
 
-        //console
         $container = new Container;
 
+        //console
         $container['console'] = function () {
             return new console;
         };
@@ -29,4 +29,3 @@ class Application
         $console->run();
     }
 }
-
