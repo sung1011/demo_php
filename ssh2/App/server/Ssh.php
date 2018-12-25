@@ -17,8 +17,8 @@ class Ssh
     private function getConn()
     {
         if (!$this->_conn) {
-            $conn = ssh2_connect('172.16.110.84', 22);
-            $user = 'playcrab';
+            $conn = ssh2_connect('', 22);
+            $user = '';
             $pass = '';
             ssh2_auth_password($conn, $user, $pass);
             $this->_conn = $conn;
